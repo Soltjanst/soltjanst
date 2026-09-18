@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soltjänst i Ådalen AB | Solarium, Fastighetsskötsel & Städ</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --solarium: #f39c12;
+            --fastighet: #27ae60;
+            --stad: #2980b9;
+            --light: #f8f9fa;
+            --dark: #333333;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--dark); line-height: 1.6; background-color: var(--light); }
+        header { background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .logo { font-weight: bold; font-size: 22px; color: var(--primary); }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: var(--solarium); }
+        .hero { background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://unsplash.com') no-repeat center center/cover; color: white; text-align: center; padding: 90px 20px; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; }
+        .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; }
+        .service-card { background: white; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h2 { margin-bottom: 15px; }
+        .card-solarium h2 { color: var(--solarium); }
+        .card-fastighet h2 { color: var(--fastighet); }
+        .card-stad h2 { color: var(--stad); }
+        .btn { display: inline-block; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        .btn-solarium { background-color: var(--solarium); }
+        .btn-fastighet { background-color: var(--fastighet); }
+        .btn-stad { background-color: var(--stad); }
+        .section { padding: 70px 20px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 28px; margin-bottom: 20px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; }
+        
+        .info-box { background: #fff3cd; border-left: 4px solid var(--solarium); padding: 15px; margin-bottom: 25px; border-radius: 4px; font-size: 16px; }
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .location-box { background: #fff; padding: 20px; border-top: 4px solid var(--solarium); border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .img-placeholder { display: block; font-size: 13px; color: #7f8c8d; font-style: italic; margin-top: 15px; background: #f2f2f2; padding: 8px; border-radius: 4px; border: 1px dashed #ccc; }
+        
+        .contact-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto; text-align: center; }
+        .contact-methods { margin-bottom: 30px; }
+        .contact-btn { display: block; background-color: var(--primary); color: white; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; margin-bottom: 15px; transition: background 0.3s; }
+        .contact-btn:hover { background-color: #1a252f; }
+        footer { background-color: var(--primary); color: white; text-align: center; padding: 30px 20px; margin-top: 50px; }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; } nav { margin-top: 15px; } .hero h1 { font-size: 32px; } .location-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Soltjänst i Ådalen AB</div>
+            <nav>
+                <a href="#solarium">Solarium</a>
+                <a href="#fastighet">Fastighetsskötsel</a>
+                <a href="#stad">Städtjänster</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Professionella tjänster i Ådalen</h1>
+        <p>Vi erbjuder allt från trygg fastighetsskötsel och skinande rena städtjänster till en varm, avkopplande stund i våra moderna solarium-salonger.</p>
+    </section>
+
+    <div class="services-grid">
+        <div class="service-card card-solarium">
+            <h2>Solarium</h2>
+            <p>Njut av skön värme och säker solning i våra fräscha salonger i både Sollefteå och Kramfors.</p>
+            <a href="#solarium" class="btn btn-solarium">Priser & Salonger</a>
+        </div>
+        <div class="service-card card-fastighet">
+            <h2>Fastighetsskötsel</h2>
+            <p>Pålitlig skötsel, underhåll och tillsyn av fastigheter för företag, BRF:er och privatpersoner.</p>
+            <a href="#fastighet" class="btn btn-fastighet">Läs mer</a>
+        </div>
+        <div class="service-card card-stad">
+            <h2>Städtjänster</h2>
+            <p>Vi fixar städningen! Professionell hemstäd, flyttstäd och företagsstäd med skinande resultat.</p>
+            <a href="#stad" class="btn btn-stad">Våra städtjänster</a>
+        </div>
+    </div>
+
+    <section id="solarium" class="section">
+        <h2>Våra Solarium-salonger</h2>
+        <p style="margin-bottom: 20px;">Välkommen till våra trygga och fräscha solarium. Vi erbjuder drop-in i moderna solarier med regelbundna rörbyten for bästa resultat. Öppet alla dagar!</p>
+        
+        <div class="info-box">
+            ☀️ <strong>Pris:</strong> Endast <strong>6 kr per minut</strong>.<br>
+            💵 <strong>Betalning:</strong> Viktigt! Vi tar <strong>endast emot kontant betalning</strong> i våra salonger.
+        </div>
+        
+        <div class="location-grid">
+            <div class="location-box">
+                <h3>Sollefteå</h3>
+                <p>Storgatan 79<br>881 31 Sollefteå</p>
+                <p><strong>Öppettider:</strong> 06:00 – 22:00 (Alla dagar)</p>
+                <span class="img-placeholder">📸 Bilder på salongen kommer inom kort!</span>
+            </div>
+            <div class="location-box">
+                <h3>Kramfors</h3>
+                <p>Torggatan 13<br>872 30 Kramfors</p>
+                <p><strong>Öppettider:</strong> 06:00 – 22:00 (Alla dagar)</p>
+                <span class="img-placeholder">📸 Bilder på salongen kommer inom kort!</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="fastighet" class="section">
+        <h2>Fastighetsskötsel</h2>
+        <p>Soltjänst i Ådalen AB är din trygga partner för allt inom fastighetsskötsel. Vi hanterar både inre och yttre skötsel, löpande underhåll, gräsklippning, snöröjning och mindre reparationer. Vi skräddarsyr lösningar utifrån era behov.</p>
+    </section>
+
+    <section id="stad" class="section">
+        <h2>Städtjänster</h2>
+        <p>Lämna städningen till proffsen. Vi utför noggrann och effektiv städning för både privata hem och arbetsplatser i regionen. Oavsett om du behöver regelbunden veckostädning, storstädning eller flyttstädning levererar vi alltid högsta kvalitet.</p>
+    </section>
+
+    <section id="kontakt" class="section">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2>Kontakta Oss</h2>
+            <p>Hör av dig till oss direkt via knapparna nedan för frågor eller offertförfrågningar!</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-methods">
+                <a href="mailto:akram-z@hotmail.se?subject=Förfrågan via hemsidan" class="contact-btn" style="background-color: #f39c12;">Skicka E-post (akram-z@hotmail.se)</a>
+                <a href="tel:+4673852458" class="contact-btn" style="background-color: #27ae60;">Ring oss: 073-852 458</a>
+            </div>
+            <p style="font-size: 14px; color: #666;">Klicka på knapparna ovan för att starta ett mejl eller ringa oss direkt från din telefon eller dator.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Soltjänst i Ådalen AB. Alla rättigheter förbehållna.</p>
+    </footer>
+
+</body>
+</html>
