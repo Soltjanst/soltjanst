@@ -25,23 +25,27 @@
         .hero h1 { font-size: 42px; margin-bottom: 20px; }
         .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; }
-        .service-card { background: white; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .service-card { background: white; padding: 30px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
         .service-card:hover { transform: translateY(-5px); }
         .service-card h2 { margin-bottom: 15px; }
         .card-solarium h2 { color: var(--solarium); }
         .card-fastighet h2 { color: var(--fastighet); }
         .card-stad h2 { color: var(--stad); }
-        .btn { display: inline-block; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        .btn { display: inline-block; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; width: 100%; text-align: center; }
         .btn-solarium { background-color: var(--solarium); }
         .btn-fastighet { background-color: var(--fastighet); }
         .btn-stad { background-color: var(--stad); }
         .section { padding: 70px 20px; max-width: 1200px; margin: 0 auto; }
         .section h2 { font-size: 28px; margin-bottom: 20px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; }
         
-        .info-box { background: #fff3cd; border-left: 4px solid var(--solarium); padding: 15px; margin-bottom: 25px; border-radius: 4px; font-size: 16px; }
+        /* Logotyp i första kortet */
+        .solarium-first-page-logo { max-width: 180px; width: 100%; height: auto; margin-bottom: 15px; border-radius: 6px; }
+
+        .info-box { background: #fff3cd; border-left: 4px solid var(--solarium); padding: 15px; margin-bottom: 25px; border-radius: 4px; font-size: 16px; text-align: left; }
         .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        .location-box { background: #fff; padding: 20px; border-top: 4px solid var(--solarium); border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .img-placeholder { display: block; font-size: 13px; color: #7f8c8d; font-style: italic; margin-top: 15px; background: #f2f2f2; padding: 8px; border-radius: 4px; border: 1px dashed #ccc; }
+        .location-box { background: #fff; padding: 20px; border-top: 4px solid var(--solarium); border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left; }
+        .fb-btn { display: inline-block; background-color: #1877f2; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 14px; margin-top: 15px; transition: background 0.3s; }
+        .fb-btn:hover { background-color: #145dbf; }
         
         .contact-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto; text-align: center; }
         .contact-methods { margin-bottom: 30px; }
@@ -71,26 +75,36 @@
     </section>
 
     <div class="services-grid">
+        <!-- SOLARIET PÅ FÖRSTASIDAN MED LOGOTYP -->
         <div class="service-card card-solarium">
-            <h2>Solarium</h2>
-            <p>Njut av skön värme och säker solning i våra fräscha salonger i både Sollefteå och Kramfors.</p>
+            <div>
+                <h2>Solarium</h2>
+                <img src="logo.png" alt="SunVision Logo" class="solarium-first-page-logo">
+                <p>Njut av skön värme och säker solning i våra fräscha salonger i både Sollefteå och Kramfors.</p>
+            </div>
             <a href="#solarium" class="btn btn-solarium">Priser & Salonger</a>
         </div>
+        
         <div class="service-card card-fastighet">
-            <h2>Fastighetsskötsel</h2>
-            <p>Pålitlig skötsel, underhåll och tillsyn av fastigheter för företag, BRF:er och privatpersoner.</p>
+            <div>
+                <h2>Fastighetsskötsel</h2>
+                <p>Pålitlig skötsel, underhåll och tillsyn av fastigheter för företag, BRF:er och privatpersoner.</p>
+            </div>
             <a href="#fastighet" class="btn btn-fastighet">Läs mer</a>
         </div>
+        
         <div class="service-card card-stad">
-            <h2>Städtjänster</h2>
-            <p>Vi fixar städningen! Professionell hemstäd, flyttstäd och företagsstäd med skinande resultat.</p>
+            <div>
+                <h2>Städtjänster</h2>
+                <p>Vi fixar städningen! Professionell hemstäd, flyttstäd och företagsstäd med skinande resultat.</p>
+            </div>
             <a href="#stad" class="btn btn-stad">Våra städtjänster</a>
         </div>
     </div>
 
-    <section id="solarium" class="section">
+    <section id="solarium" class="section" style="text-align: center;">
         <h2>Våra Solarium-salonger</h2>
-        <p style="margin-bottom: 20px;">Välkommen till våra trygga och fräscha solarium. Vi erbjuder drop-in i moderna solarier med regelbundna rörbyten for bästa resultat. Öppet alla dagar!</p>
+        <p style="margin-bottom: 20px; text-align: left;">Välkommen till våra trygga och fräscha solarium. Vi erbjuder drop-in i moderna solarier med regelbundna rörbyten för bästa resultat. Öppet alla dagar!</p>
         
         <div class="info-box">
             ☀️ <strong>Pris:</strong> Endast <strong>6 kr per minut</strong>.<br>
@@ -99,16 +113,18 @@
         
         <div class="location-grid">
             <div class="location-box">
-                <h3>Sollefteå</h3>
+                <h3>Sollefteå (Sun Vision)</h3>
                 <p>Storgatan 79<br>881 31 Sollefteå</p>
                 <p><strong>Öppettider:</strong> 06:00 – 22:00 (Alla dagar)</p>
-                <span class="img-placeholder">📸 Bilder på salongen kommer inom kort!</span>
+                <!-- Rätt länk för Sollefteå -->
+                <a href="https://www.facebook.com/p/Sun-Vision-Solarium-100046479806421/" target="_blank" class="fb-btn">Se bilder på Facebook 📸</a>
             </div>
             <div class="location-box">
-                <h3>Kramfors</h3>
+                <h3>Kramfors (SunVision)</h3>
                 <p>Torggatan 13<br>872 30 Kramfors</p>
                 <p><strong>Öppettider:</strong> 06:00 – 22:00 (Alla dagar)</p>
-                <span class="img-placeholder">📸 Bilder på salongen kommer inom kort!</span>
+                <!-- Rätt länk för Kramfors -->
+                <a href="https://www.facebook.com/sunvision13" target="_blank" class="fb-btn">Se bilder på Facebook 📸</a>
             </div>
         </div>
     </section>
